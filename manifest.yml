@@ -1,0 +1,9 @@
+---
+applications:
+- name: pymongo-music
+  host: pymongo-music
+  memory: 256M
+  services:
+    - mongo-instance
+
+

@@ -1,0 +1,19 @@
+:imagesdir: docs/images
+
+= Pymongo Music
+
+A Flask/Pymongo implementation of https://github.com/cloudfoundry-samples/spring-music[Spring Music]
+
+== Building and Deploying
+
+. Runs locally on port 9099 pointing to a Mongo DB at localhost:27017
+
+. Runs on cloud foundry
++
+....
+$ cf push
+....
++
+. This app assumes you are using Ben Bertka's https://github.com/bbertka-pivotal/pcf-mongodb-oss[MongoDB Tile for PCF].
+If not, you may need to make some adjustments, particularly in the label under VCAP_SERVICES.
+. Create a MongoDB service instance called 'mongo-instance' and `cf push`.
